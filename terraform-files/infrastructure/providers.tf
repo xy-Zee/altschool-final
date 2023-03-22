@@ -32,7 +32,7 @@ terraform {
 
 terraform {
   backend "s3" {
-    bucket = "azeemat211"
+    bucket = "azeemat2501"
     key = "global/infrastructure/terraform.tfstate"
     region     = "us-east-1"
     dynamodb_table = "terraform-state-lock"
