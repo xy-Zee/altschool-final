@@ -30,7 +30,7 @@ terraform {
 #   }
 # }
 
-terraform {
+/*terraform {
   backend "s3" {
     bucket = "azeemat2501"
     key = "global/infrastructure/terraform.tfstate"
@@ -38,7 +38,7 @@ terraform {
     dynamodb_table = "terraform-state-lock"
     encrypt = true
   }
-}
+}*/
 
 # Kubernetes provider configuration
 
