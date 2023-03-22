@@ -12,7 +12,7 @@ resource "aws_route53_zone" "socks-domain-name" {
 
 data "aws_elb_hosted_zone_id" "elb_zone_id" {
   depends_on = [
-    kubernetes_service.kube-service-webapp, kubernetes_service.kube-service-socks
+    kubernetes_service.kube-service-portfolio, kubernetes_service.kube-service-socks
   ]
 }
 
