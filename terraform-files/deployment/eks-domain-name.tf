@@ -18,7 +18,7 @@ data "aws_elb_hosted_zone_id" "elb_zone_id" {
 
 # DNS record for portfolio
 
-resource "aws_route53_record" "webapp-record" {
+resource "aws_route53_record" "portfolio-record" {
   zone_id = aws_route53_zone.portfolio-domain-name.zone_id
   name    = "portfolio.azeemat.tech"
   type    = "A"
