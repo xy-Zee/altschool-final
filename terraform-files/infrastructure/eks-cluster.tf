@@ -1,7 +1,7 @@
 # CloudWatch Log group for EKS cluster
 
-resource "aws_cloudwatch_log_group" "eks-cluster-logs" {
-  name              = "/aws/eks/eks-cluster/cluster"
+resource "aws_cloudwatch_log_group" "eks1-cluster-logs" {
+  name              = "/aws/eks/eks1-cluster/cluster"
   retention_in_days = 7
 }
 
