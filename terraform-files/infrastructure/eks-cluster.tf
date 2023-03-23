@@ -19,7 +19,7 @@ resource "aws_eks_cluster" "eks-cluster" {
   depends_on = [
     aws_iam_role_policy_attachment.eks-cluster-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.eks-cluster-AmazonEKSVPCResourceController,
-    aws_cloudwatch_log_group.eks-cluster-logs,
+    aws_cloudwatch_log_group.eks1-cluster-logs,
   ]
 
   enabled_cluster_log_types = ["api", "audit"]
