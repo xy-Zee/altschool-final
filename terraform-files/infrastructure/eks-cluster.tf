@@ -1,7 +1,7 @@
 # CloudWatch Log group for EKS cluster
 
-resource "aws_cloudwatch_log_group" "eks4-cluster-logs" {
-  name              = "/aws/eks/eks2-cluster/cluster"
+resource "aws_cloudwatch_log_group" "eks-cluster-logs" {
+  name              = "/aws/eks/eks-cluster/cluster"
   retention_in_days = 7
 }
 
@@ -19,7 +19,7 @@ resource "aws_eks_cluster" "eks-cluster" {
   depends_on = [
     aws_iam_role_policy_attachment.eks-cluster-AmazonEKSClusterPolicy,
     aws_iam_role_policy_attachment.eks-cluster-AmazonEKSVPCResourceController,
-    aws_cloudwatch_log_group.eks4-cluster-logs,
+    aws_cloudwatch_log_group.eks-cluster-logs,
   ]
 
   enabled_cluster_log_types = ["api", "audit"]
