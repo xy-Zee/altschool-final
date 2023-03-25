@@ -1,6 +1,6 @@
 # Route 53 and sub-domain name setup
 
-resource "aws_route53_zone" "webapp-domain-name" {
+resource "aws_route53_zone" "portfolio-domain-name" {
   name = "portfolio.azeemat.tech"
 }
 
@@ -24,7 +24,7 @@ resource "aws_route53_record" "portfolio-record" {
   type    = "A"
 
   alias {
-    name                   = kubernetes_service.kube-service-webapp.status.0.load_balancer.0.ingress.0.hostname
+    name                   = kubernetes_service.kube-service-portfolio.status.0.load_balancer.0.ingress.0.hostname
     zone_id                = data.aws_elb_hosted_zone_id.elb_zone_id.id
     evaluate_target_health = true
   }
